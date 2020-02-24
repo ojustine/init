@@ -1,0 +1,3 @@
+my_ip=$(ipconfig getifaddr en0)
+nslookup $my_ip | awk '/name/ {print $ 4}'
+host $my_ip | awk '/name/ {print $ 5}'

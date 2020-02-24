@@ -1,0 +1,2 @@
+netstat -rn | awk '/default/ {if (index($ 6, "en") > 0) {print $ 2}}'
+route -n get default | awk '/gateway/ {print $ 2}'

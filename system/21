@@ -1,0 +1,2 @@
+cat /etc/passwd | awk -F ':' '999<$ 3 && $ 3<30000 {print $ 1}'
+ls /home

@@ -1,0 +1,3 @@
+dig @8.8.8.8 slash16.org +short
+nslookup -type=a slash16.org 8.8.8.8 | awk '/Address/ {print $ 2}'
+host slash16.org 8.8.8.8 | awk '/address/ {print $ 4}'

@@ -1,0 +1,10 @@
+bc_ip=$(bash 02a)
+my_subnet=$(ipconfig getifaddr en0 | awk '{print substr($ 0, 0, 10)}')
+if ping -c 3 -i 0.1 $bc_ip 2>&1 > /dev/null ; then
+	echo "ping: OK"
+else
+	echo "ping: FAIL"
+fi
+arp -a | grep $my_subnet
+unset bc_ip
+unset my_subnet

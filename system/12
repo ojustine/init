@@ -1,0 +1,4 @@
+sudo du -bcsh /var/*
+#exact size
+sudo du -csh /var/*
+#size occupied on disk

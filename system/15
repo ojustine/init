@@ -1,0 +1,2 @@
+pkill tail
+kill TERM/KILL PID

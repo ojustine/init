@@ -1,0 +1,8 @@
+ps aux | grep sbin/sshd | grep -v grep | awk '{print $ 2}'
+cat /var/run/sshd.pid
+sudo service ssh status | awk '/Main PID/ {print $ 3}'
+sudo systemctl status ssh | awk '/Main PID/ {print $ 3}'
+sudo /etc/init.d/ssh status | awk '/Main PID/ {print $ 3}'
+pgrep sshd
+pidof sshd
+ps -C sshd h | awk '{print $ 1}'

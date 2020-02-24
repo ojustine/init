@@ -1,0 +1,4 @@
+sudo service ssh stop
+sudo systemctl stop ssh
+sudo /etc/init.d/ssh stop
+killall sshd

@@ -1,0 +1,2 @@
+ipconfig getifaddr en0
+ifconfig en0 | awk '/inet / {print $ 2}'

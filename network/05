@@ -1,0 +1,2 @@
+nslookup -type=ns slash16.org | awk '/Address:/ {print $2}'
+dig +noall +stats slash16.org | awk '/SERVER/ {print $3}'
